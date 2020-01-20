@@ -2,12 +2,28 @@
 <html>
 <head>
 	<title>Cheat Sheet</title>
-	<link rel="stylesheet" href="./styles.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
-	<h1>HTML and CSS Cheat Sheet</h1>
-	<!-- HTML Tags -->
-	<section>
+	<header>
+	<nav>
+		<p>JIMPSTER</p>
+		<ul>
+			<li><a href="#">What do you want to know?</a>
+				<ul>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="index.html">HTML & CSS</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav> 		
+	</header>
+
+	<main>
+		<h1>HTML and CSS Cheat Sheet</h1>
+
+		<!-- HTML -->
+
 		<h2>HTML Tags</h2>
 			<table>
 				<thead>
@@ -188,10 +204,9 @@
 
 				</tbody>
 			</table>
+		<!--HTML Attributes  -->
 
-	<!--HTML Attributes  -->
-
-	<h2>HTML Attributes</h2>
+		<h2>HTML Attributes</h2>
 		<table>
 			<thead>
 				<th>Tag</th>
@@ -212,15 +227,13 @@
 			</tbody>
 		</table>
 
-	<h2>Notes</h2>
+		<h2>Notes</h2>
 		<p>What is the main difference between inline styles and the &lt;style&gt; tag?<br>
 		Inline styles directly modify individual HTML elements using a style attribute, whereas the &lt;style&gt; tag allows you to write CSS in a dedicated section of the HTML file. The contents within the style tag appear inside the head tag and can only contain CSS code.</p>
 
 		<p>ID's are more specific then classes and tags</p>
 
 		<p> Element Element: Will select an element nested inside another element</p>
-
-	<!--HTML Tabels -->
 
 	<!-- CSS selectors and Specificty -->
 
@@ -252,6 +265,7 @@
 			<li>The changes we make in chrome dev tools are no permanent. This is because we are not changing the code that makes up the website but a representation of the code called the DOM. (DOM is the browsers interpretation of the source code)</li>
 			<li>If you want to highlight a few words in say a paragraph, use the &lt;span&gt; tag</li>
 		</ul>
+	</main>
 
 </body>
 </html>
