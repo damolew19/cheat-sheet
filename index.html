@@ -352,6 +352,168 @@
 				<tr>
 					<th class='cattag'>CSS: Colors</th>
 				</tr>
+				<tr>
+					<th>There are four ways to represent color in CSS:</th>
+				</tr>
+				<tr>
+					<td>Named colors — there are 147 named colors</td>
+				</tr>
+				<tr>
+					<td>Hexadecimal or hex colors. </td>
+				</tr>
+				<tr>
+					<td>Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”. Hex values always begin with # and specify values of red, blue and green using hexademical numbers such as #23F41A.</td>
+				</tr>
+				<tr>
+					<td>RGB</td>
+				</tr>
+				<tr>
+					<td>RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green. RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).</td>
+				</tr>
+				<tr>
+					<td>HSL</td>
+				</tr>
+				<tr>
+					<td>HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is). Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).</td>
+				</tr>
+				<tr>
+					<td>You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.</td>
+				</tr>
+				<tr>
+					<th class='cattag'>CSS: TypoGraphy</th>
+				</tr>
+				<tr>
+					<td>Typography is the art of arranging text on a page.</td>
+				</tr>
+				<tr>
+					<td>Text can appear in any number of weights, with the font-weight property.</td>
+				</tr>
+				<tr>
+					<td>Text can appear in italics with the font-style property.</td>
+				</tr>
+				<tr>
+					<td>The vertical spacing between lines of text can be modified with the line-height property.</td>
+				</tr>
+				<tr>
+					<td>Serif fonts have extra details on the ends of each letter. Sans-Serif fonts do not.</td>
+				</tr>
+				<tr>
+					<td>Fallback fonts are used when a certain font is not installed on a user’s computer.</td>
+				</tr>
+				<tr>
+					<td>Google Fonts provides free fonts that can be used in an HTML file with the <link> tag or the @font-face property.</td>
+				</tr>
+				<tr>
+					<td>Local fonts can be added to a document with the @font-face property and the path to the font’s source.</td>
+				</tr>
+				<tr>
+					<td>The word-spacing property changes how far apart individual words are.</td>
+				</tr>
+				<tr>
+					<td>The letter-spacing property changes how far apart individual letters are.</td>
+				</tr>
+				<tr>
+					<td>The text-align property changes the horizontal alignment of text.</td>
+				</tr>
+				<tr>
+					<th class='cattag'>CSS: Sizing Elements</th>
+				</tr>
+				<tr>
+					<td>Content on a website can be sized relative to other elements on the page using relative measurements.</td>
+				</tr>
+				<tr>
+					<td>The unit of em sizes font relative to the font size of a parent element.</td>
+				</tr>
+				<tr>
+					<td>The unit of rem sizes font relative to the font size of a root element. That root element is the <html> element.</td>
+				</tr>
+				<tr>
+					<td>Percentages are commonly used to size box-model features, like the width, height, padding, or margin of an element.</td>
+				</tr>
+				<tr>
+					<td>When percentages are used to size width and height, child elements will be sized relative to the dimensions of their parent (remember that parent dimensions must first be set).</td>
+				</tr>
+				<tr>
+					<td>Percentages can be used to set padding and margin. Horizontal and vertical padding and margin are set relative to the width of a parent element.</td>
+				</tr>
+				<tr>
+					<td>The minimum and maximum width of elements can be set using min-width and max-width.</td>
+				</tr>
+				<tr>
+					<td>The minimum and maximum height of elements can be set using min-height and max-height.</td>
+				</tr>
+				<tr>
+					<td>When the height of an image or video is set, then its width can be set to auto so that the media scales proportionally. Reversing these two properties and values will also achieve the same result.</td>
+				</tr>
+				<tr>
+					<td>A background image of an HTML element will scale proportionally when its background-size property is set to cover.</td>
+				</tr>
+				<tr>
+					<th class='cattag'>Media Queries</th>
+				</tr>
+				<tr>
+					<td>When a website responds to the size of the screen it’s viewed on, it’s called a responsive website.</td>
+				</tr>
+				<tr>
+					<td>You can write media queries to help with different screen sizes.</td>
+				</tr>
+				<tr>
+					<td>Media queries require media features. Media features are the conditions that must be met to render the CSS within a media query.</td>
+				</tr>
+				<tr>
+					<td>Media features can detect many aspects of a user’s browser, including the screen’s width, height, resolution, orientation, and more.</td>
+				</tr>
+				<tr>
+					<td>The and operator requires multiple media features to be true at once.</td>
+				</tr>
+				<tr>
+					<td>A comma separated list of media features only requires one media feature to be true for the code within to be applied.</td>
+				</tr>
+				<tr>
+					<td>The best practice for identifying where media queries should be set is by resizing the browser to determine where the content naturally breaks. Natural breakpoints are found by resizing the browser.</td>
+				</tr>
+				<tr>
+					<th class='cattag'>Flexbox</th>
+				</tr>
+				<tr>
+					<td><span class='attribute'>display: flex</span> changes an element to a block-level container with flex items inside of it.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>display: inline-flex</span> allows multiple flex containers to appear inline with each other.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>justify-content</span> is used to space items along the major axis.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>align-items</span> is used to space items along the cross axis.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-grow</span> is used to specify how much space (and in what proportions) flex items absorb along the major axis.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-shrink</span> is used to specify how much flex items shrink and in what proportions along the major axis.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-basis</span> is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex</span> is used to specify <span class='attribute'>flex-grow, flex-shrink,</span> and <span class='attribute'>flex-basis</span> in one declaration.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-wrap</span> specifies that elements should shift along the cross axis if the flex container is not large enough.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>align-content</span> is used to space rows along the cross axis.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-direction</span> is used to specify the major and cross axes.</td>
+				</tr>
+				<tr>
+					<td><span class='attribute'>flex-flow</span> is used to specify <span class='attribute'>flex-wrap</span> and <span class='attribute'>flex-direction</span> in one declaration.</td>
+				</tr>
+				<tr>
+					<td>Flex containers can be nested inside of each other by declaring <span class='attribute'>display: flex</span> or <span class='attribute'>display: inline-flex</span>ß for children of flex containers.</td>
+				</tr>
 			</tbody>
 		</table>
 
