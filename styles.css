@@ -97,7 +97,7 @@ td {
 	font-family: monspace;
 }
 
-#cattag {
+.cattag {
 	text-align: center;
 	background-color: rgba(13.3, 21.2, 23.1, .3)
 }
