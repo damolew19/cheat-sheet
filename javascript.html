@@ -1,16 +1,636 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cheat Sheet</title>
+	<title>JS - Cheat Sheet</title>
 	<link rel="stylesheet" href="./styles.css" type="text/css">
 </head>
 <body>
-	<h1>JavaScript Cheat Sheet</h1>
-	<!-- Some Note on JS -->
-	<h2>Notes on JS</h2>
+<header>
+	<nav class='header'>
+	<p><a href="index.html">Cheat Sheet</a></p>
 	<ul>
-		<li>Data types: Primitive include number, string, boolean, null, undefined and symbol. Objects are complex.</li>
-		<li>. is a called the dot operator</li>
+		<li><a href="#">What do you want to know?</a>
+			<ul>
+				<li><a href="html.html">HTML</a></li>
+				<li><a href="css.html">CSS</a></li>
+				<li><a href="javascript.html">JavaScript</a></li>
+				<li><a href="commandLine.html">Command Line</a></li>
+				<li><a href="git.html">Git</a></li>
+				<li><a href="react.html">React</a></li>
+			</ul>
+		</li>
 	</ul>
+	</nav> 	
+</header>
+<main>
+	<h1>JavaScript Cheat Sheet</h1>
+	<nav class='jump'>
+		<ul>
+			<li>|| <a href='#1.1'>1.1 Functions</a> || </li>
+			<li><a href='#1.2'>1.2 Scope</a> ||</li>
+			<li><a href='#1.3'>1.3 Arrays</a> ||</li>
+			<li><a href='#1.4'>1.4 Loops</a> ||</li>
+			<li><a href='#1.5'>1.5 Higher-Order Functions</a> ||</li>
+			<li><a href='#1.6'>1.6 Iterators</a> ||</li>
+			<li><a href='#1.7'>1.7 Objects</a> ||</li>
+			<li><a href='#1.8'>1.8 Advanced Objects</a> ||</li>
+		</ul>
+		<ul>
+			<li>|| <a href='#2.1'>2.1 The Script Element</a> || </li>
+			<li><a href='#2.2'>2.2 The DOM</a> ||</li>
+			<li><a href='#2.3'>2.3 JavaScript and the DOM</a> ||</li>
+			<li><a href='#2.4'>2.4 DOM Events</a> ||</li>
+			<li><a href='#2.5'>2.5 Templating with Handlebars</a> ||</li>
+		</ul>
+		<ul>
+			<li>|| <a href='#3.1'>3.1 Classes</a> || </li>
+			<li><a href='#3.2'>3.2 Modules</a> ||</li>
+			<li><a href='#3.3'>3.3 Debugging JavaScript</a> ||</li>
+			<li><a href='#3.4'>3.4 Error Handling</a> ||</li>
+			<li><a href='#3.5'>3.5 Promises</a> ||</li>
+			<li><a href='#3.6'>3.6 Async Await</a> ||</li>
+			<li><a href='#3.7'>3.7 Requests</a> ||</li>
+			<li><a href='#3.8'>3.8 Requests with ES6
+			</a> ||</li>
+		</ul>
+	</nav>
+	<br>
+	<!-- Basics -->
+	<section class='module'>
+		<h2>JavaScript Essentials</h2>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.1'>1.1 Functions</h3>
+			<p>A <em>function</em> is a reuseable block of code that groups together a sequence of statements to perform a specific task.</p><br>
+			<p><strong>Function Declarations: </strong>You need a function keyword, identifier (name) and function body.</p><br>
+			<p><strong>Calling a Function: </strong>The code inside a function body runs, only when the function is called. To call a function, you need to type the the function name followed by parentheses.</p><br>
+			<p><strong>Parameters and Arguments: </strong>Parameters allow functions ot accept input(s). These values that pass through the function are called arguments.</p><br>
+			<p><strong>Default Parameters: </strong>Introduced in ES6, this allows parameters to have a predetermined value in case there is no argument passed into the funciton of if the argument is undefined when called.</p>
+			<figure class='examples'>
+				<figcaption>Example: Click Me</figcaption>
+				<img class='exImg' src='./images/examples/defaultParameters.png'></figure>
+			<br>
+			<p><strong>Return: </strong>This allows a function to produce an output. Without this, the function will return undefined.</p><br>
+			<p><strong>Helper Functions: </strong>Functions being alled within another function where, the return value of a function is inside another function.</p><br>
+			<p><strong>Function Expressions: </strong>This is another way to define a function. To decalre in this way, decalre a variable with the variable being the identifer. Assign this to the function keyword followed by parameters and then the braces. To involve(call) write the variable name folled by the parentheses enclosing aguments. Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined.</p>
+			<figure class='examples'>
+				<figcaption>Example: Click Me</figcaption>
+				<img class='exImg' src='./images/examples/functionExpression.png'>
+			</figure>
+			<br>
+			<p><strong>Arrow Functions: </strong>This is a faster way to write functions.</p>
+			<figure class='examples'>
+				<figcaption>Example: Click Me</figcaption>
+				<img class='exImg' src='./images/examples/arrowFunctions.png'>
+			</figure>
+			<br>
+			<p><strong>Concies Body Arrow Functions: </strong>There are several ways to refactor arrow function syntax:</p>
+			<ol class='pushNum'>
+				<li>Functions that take only a single parameter do not paratheses. However, if a function takes zero or multiple parameters, parenthese are required.<br>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/parameters.png'></figure>
+				</li>
+				<li>Single-line and multi-line blocks.<br>
+					<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/lineBlocks.png'></figure>
+				</li>
+			</ol>
+			<br>
+		</section>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.2'>1.2 Scope</h3>
+			<p><strong>Scope: </strong>Idea in programming that some variables are accessible/inaccessible from other parts of the program</p>
+			<p><strong>Blocks: </strong>Statements that exist within curly braces {}.</p>
+			<p><strong>Global Scope: </strong>The variables that are declared outisde of block. are accessible to every part of the program. These are called global variables.</p>
+			<p><strong>Block Scope: </strong>The variables that are declared inside a block, is only accessible to the code within the curly braces {}. These are called local variables.</p>
+			<p><strong>Global Namespace: </strong>Space in our code that contains globally scoped information. Put all global variables to the top.</p>
+			<p><strong>Scope Pollution: </strong>When too many variables exist in a namespace or variable names are reused.</p>
+			<br>
+		</section>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.3'>1.3 Arrays</h3>
+			<p><strong>Create an Array: </strong> Wrap items in square brackets [], with each element seperated by a comma.</p>
+			<p><strong>Accessing Elements: </strong>Each elements position has an index. We can access an element by <span class='highlight'>arrayName[indexNumber]</span></p>
+			<p><strong>Update Elements: </strong>Update element 3 like <span class='highlight'>array[2] = 'newThing'</span></p>
+			<p><strong>let and const: </strong>Variables declared with const cannot be reassigned, but the elemetns can be updated. Variables declared with let can be reassigned.</p>
+			<p><strong>The .length Property: </strong> This  built in property will return the number of elements in an array.</p>
+			<p><strong>The .push() Method: </strong>This is a built in JavaScript method which allows us to add items to the end of an array. .push() is a destructive method.</p>
+			<p><strong>The .pop() Method: </strong>This is a built in JavaScript method which removes the last item of an array. .pop() is a detructive method.</p>
+			<p><strong>The .join() Method: </strong></p>
+			<p><strong>The .slice() Method: </strong>This method will create a new array with the inputed elements. Non destructive.</p>
+			<p><strong>The .splice() Method: </strong></p>
+			<p><strong>The .shift() Method: </strong>This method will remove the first item from an array.</p>
+			<p><strong>The .unshift() Method: </strong>This method will add an element to the begining of an array.</p>
+			<p><strong>The .concat() Method: </strong></p>
+			<p><strong>The .indexOf() Method: </strong>Returns the index of an element if it is in the given array.</p>
+			<p><strong>Arrays & Functions: </strong>If an pass an array inside a function and it is mutated inside a function, the change will maintain outside the function.</p>
+			<p><strong>Nested Arrays: </strong>When an array contains another array. To access, use a chain of bracket notation.</p>
+			<br>
+		</section>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.4'>1.4 Loops</h3>
+			<p>A loop is a programming tool that repeats a set of instructions untila specified condition (stopping condition) is met. Iterate is to 'loop.</p>
+			<p><strong>The For Loop: </strong>The for loop includes a iterator variable which is initialized, check against the stopping condition and assigned a new value on each loop interation.</p>
+			<p><strong>The While Loop: </strong>In situations when we want to execute a loop an undetermined number of times, a while loop is idea. The sytax starts with the keyword while followed by a stopping condtion. After is the we have the loop's code block.</p>
+			<p><strong>Do...While Statements: </strong>For this case, the code will run at least once and then loop based o a specific condition after its initial run.</p>
+			<p><strong>The Break Keyword: </strong>This keyword allows programs to 'break' out of the loop form within the loop's block.</p>
+			<br>
+		</section>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.5'>1.5 Higher-Order Functions</h3>
+			<p>Higher-Order Functions are functions that accept other functions as arguments and/or return functions as output.</p>
+			<p><strong>Functions as Data: </strong>Assiging and reassigning functions to variables. JavaScript functions are first class objects, meaning they can have properties and methods. </p>
+			<p><strong>Functions as Parameters: </strong>Functions that can be passed into other functions as parameters (call back functions).</p>
+			<br>
+
+			<h3 class='lesson' id='1.6'>1.6 Iterators</h3>
+			<p>Built-in JavaScript array methods (iteration method)</p>
+			<p><strong>The .forEach() Method: </strong>This method is used to execute the same code on every element in an array but doe not change the array and returns undefined.</p>
+			<p><strong>The .map() Method: </strong>This method executes the same code on every element in an array and returns a new array with the updated elements.</p>
+			<p><strong>The .filter() Method: </strong>This method checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.</p>
+			<p><strong>The .findIndex() Method: </strong>This method returns the index of the first element of an array which satisifes a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.</p>
+			<p><strong>The .reduce() Method: </strong>Iterates through an array and takes the values of the elements and returns a single value.</p>
+			<p><strong>Iterator Documentation: </strong>MDN;s array iteration methods page...make a url link here.</p>
+			<br>
+		</section>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.7'>1.7 Objects</h3>
+			<p><strong>Object Literals: </strong>Objects can be assigned to variables just like any JavaScript Type and we use curly braces {}, to designate an object literal. The data is organized into key-value pairs.</p>
+			<p><strong>Dot Notation: </strong>There are two ways to access an object's property, dot notation and bracket notation. Use dot notation to access the properties and methods of built-in objects and data instances.</p>
+			<p><strong>Bracket Notation: </strong>You must use bracket notation when accessing keys that have numbers, spaces, or special characters in them. With bracket notation you can also use a varibale inside te brackets to select the keys of an object.</p>
+			<p><strong>Property Assignment: </strong>Objects are mutable. We can use either notation along with = to add new key-value pairs, or change an existing property. You can delete a property from an object with the delete operator.</p>
+			<p><strong>Methods: </strong>When the data stored on an object is a function, we call that a <em>method</em>. A property is what an object has, while a method is what an object does. An example of this is the global JavaScript object <em>Math</em> and <em>.floor</em> is a method on it. Object methods are invoked by appending the object's name with the dot operator followed by the method name and parentheses. There are two examples below, the first is the pre ES6 way of implementaing a method, whilst the later is the ES6 version.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/objectMethods1.png'></figure>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/objectMethods2.png'></figure>
+			<br>
+			<p><strong>Nested Objects: </strong>It is common to see an object as another objects property. You can chain operators to access nested properties.</p>
+			<p><strong>Pass By Reference: </strong>When we make changes to an object passed into a function, those changes are permanent.</p>
+			<p><strong>Looping Through Objects: </strong>We can iterate through objects using the <span class='highlight'>For...in</span> syntax.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/for...in.png'></figure>
+			<br>
+			<h3 class='lesson' id='1.8'>1.8 Advanced Objects</h3>
+			<p><strong>The this Keyword: </strong>The <span class='highlight'>this</span> keyword refers the calling object and can be used to access properties of the calling object. The object that a method belongs to is called the calling object. Methods do not automatically have access to other internal properties of the calling object. The value of this depends on where the this is being accessed from. </p>
+			<p><strong>Arrow Functions and this: </strong>We cannot use arrow functions as methods if we want to access other internal properties i.e we cannot use arrow functions when we use this.</p>
+			<p><strong>Privacy: </strong>The idea here is that only certain properties of an object should be mutable. JavaScript objects do not have built-in privacy, rather there are conventions to follow to notify other developers about the intent of the code. The usage of an underscore before a property name means that the original developer did not intend for that property to be directly changed.</p>
+			<p><strong>Getters: </strong>Setters and getter methods allow for more detailed ways of acessing and assigning properties. Getters can:</p>
+			<ul class='dotPoints'>
+				<li>perform an action on the data when getting a property.</li>
+				<li>Return different values using conditionals</li>
+				<li>Can access the properties of the calling object using this.</li>
+			</ul>
+			<figure class='examples'>Example: Click me<img class='exImg' src='./images/examples/getters.png'></figure>
+			<br>
+			<p><strong>Setters: </strong>Setters change or mutate the object. When calling a setter method, we do no need to use parentheses.</p>
+			<figure class='examples'>Example: Click me<img class='exImg' src='./images/examples/setters.png'></figure>
+			<figure class='examples'>Example: Click me (calling setters)<img class='exImg' src='./images/examples/callSetters.png'></figure>
+			<br>
+			<p><strong>Factory Functions: </strong>Factory functions allow us to create object instances quickly and repeatedly. A factory function does this by returning an object.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/factoryFunction.png'></figure>
+			<br>
+			<p><strong>Property Value Shorthand: </strong>ES6 introduced some new shortcuts for assigning properties to variables known as destructuring. This mmethod allows us to add more properties with less keystroke for factory functions.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/propertyValueShorthand.png'></figure>
+			<br>
+			<p><strong>Destructured Assignemnt: </strong>Extracting key-value pairs form objects and saving them as variables.</p>
+			<figure class='examples'>Examples: Click Me<img class='exImg' src='./images/examples/destructuredAssignment.png'></figure>
+			<br>
+			<p><strong>Built-in Object Methods: </strong>Some examples are:</p>
+				<ul class='dotPoints'>
+					<li>Object.hasOwnProperty()</li>
+					<li>Object.valueOf()</li>
+					<li>Object.keys()</li>
+					<li>Object.entries()</li>
+					<li>Object.assign()</li>
+					<li>For more visit: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods'>MDN's Object instance documentation</a></li>
+				</ul>
+		</section>
+	</section/>
+	<br>
+	<!-- JavaScript Interactive Websites  -->
+	<section class='module'>
+		<h2>2. JavaScript Interactive Websites</h2>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson'>Some Modern Uses of JavaScript on Webpages</h3>
+			<ul class='dotPoints'>
+				<li>A sign-up from can check if your user name is available without refreshing the page</li>
+				<li>A search box can give you suggested results while you type</li>
+				<li>Information that changes constantly such as sport result can load independently, without refreshing the page</li>
+				<li>JavaScript can fix layout issues</li>
+				<li>JavaScript can animate elements on a page</li>
+			</ul>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='2.1'>2.1 The Script Element: </h3>
+			<p><strong>The &lt;script&gt; Tag: </strong>The <span class='highlight'>&lt;script&gt;</span> element allows you to add JavaScript code inside an HTML file.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/theScriptElement.png'></figure>
+			<br>
+			<p><strong>The Src Attribute: </strong>The script element allows us to write code in a html file, however it is best to write our JavaScript code in a seperate file.You can do this in a similiar manner as the css styles sheet using the src attribte. Place the src attribute within the first element tag.</p>
+			<br>
+			<p><strong>Defer & Async Attribute: </strong>Browers come equipped with <em>HTML parsers</em> which read elements in order.Loading a script elements content may take time. The <strong>defer & async</strong> attribute of the <span class='highlight'>&lt;script&gt;</span> element to address the user wait-time. The <strong>defer</strong> attribute specifies scripts should be exectued after the HTML file. The <strong>defer</strong> attribute will inform the parser to load the script but defer the execution until it finishes parsing the HTML file. This is useful when a script contains functionality that requires interaction with the DOM. The <strong>async</strong> attribute loads and executes the script asynchronously with the rest of the webpage. Unlike the defer attribute, the async attribute will execute as soon as it is downloaded. This is useful when <strong>async</strong> scripts are independent of other scripts. The convention is to put the script tag in the <span class='highlight'>&lt;head&gt;</span> and use the <strong>defer & sync</strong> atributes.</p>
+			<br>
+
+			<h3 class='lesson' id='2.2'>2.2 The Document Object Model</h3>
+			<p><strong>DOM :</strong>The DOM is a language-agnostic structure implemented by browsers to allow for web scripting languages to access, modify, and update the structure of an HTML web page. The window you look at using DevTools is a visual representation of the DOM. Using JavaScript to manipulate the DOM will affect the browsers HTML file, hence the visuals on the screen. However, it will not effect the original HTML file, unless activity is stored in a database. It is a powerful tree-like structure that allows programmers to conceptualize hierarchy and acess the elemnts on a webpage. It is a <strong>M</strong>odel that organizes a web page's HTML <strong>D</strong>ocument as an <strong>O</strong>bject.</p>
+			<br>
+			<p><strong>The DOM as a Tree Structure: </strong> The DOM follows similar logic to a family tree. The top-most node represents the HTML document with the decedents being the html tags and so on. We label nodes as the parent or child node to each other. Each node contains data. There are nine different types of node objects:</p>
+				<ul class='dotPoints'>
+					<li>Element (most common to modify), Text</li>
+					<li>We can access the HTML attributes of each Element.</li>
+				</ul>
+			<br>
+
+			<h3 class='lesson' id='2.3'>2.3 JavaScript and the DOM</h3>
+			<p>What are the most useful methods and properties of the DOM interface in JavaScript</p>
+			<p><strong>Document: </strong>The <span class='highlight'>document </span> object in JavaScript is the root node of the DOM tree. Before you can access a specific element in the page, first you must access the document structure itself. To access the <span class='highlight'>&lt;body&gt;</span> element, you type <strong>document.body</strong>.</p>
+			<p><strong>Tweaking Elements: </strong>With <span class='highlight'> .innerHTML</span> you can access and set the contents of an element, add additionaly valid html inside an html element and modify its attributes/properties.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src=./images/examples/innerhtml.png></figure>
+			<br>
+			<p><strong>Select and Modify Elements: </strong> The<span class=.highlight>.querySelector()</span> method allows us to specify a CSS selector and then return the first element that matches that selector. To select elements with classes and tags, use # and . accordingly.The <span class='highlight'>.getElementById()</span> function gives access elements directly by their id.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/querySelector.png'></figure>
+			<br>
+			<p><strong>Style an Element: </strong>The <span class='highlight'>.style</span> property of a DOM element provides accss to the inline style of that HTML tag. Syntax: <strong>Element.style.property</strong>, with property representing CSS property.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/styleAnElement.png'></figure>
+			<br>
+			<p><strong>Create and Insert Elements: </strong>The <span class='highlight'>.createElement(tagName)</span> method creates a new element based on the specified tag name passed into it as an argument. In order to create an element and add it to the web page, you must assign it to be the child of an element that already exists. The <span class='highlight'>.appendChild()</span> method will add a child element as the last child node.</p>
+			<p><strong>Remove an Element: </strong>The <span class='highlight'>.removeChild()</span> method removes a specified child from a parent. The <span class='highlight'>.hidden</span> property allows you to hide an element by assigning it as true or false</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/removeAnElement.png'></figure>
+			<br>
+			<p><strong>Interactivity with Onclick: </strong>The <span>.onClick</span> property allows you to assign a function to run on a click event on an element.</p>
+			<p><strong>Traversing the DOM: </strong>Each node has a <span class='highlight'>.parent & .children</span> property. the property will return a list of element's. The <span class='highlight'>.firstChild</span> property will grant access to the first child of that parent element</p>
+			<p><strong>Note: </strong> Every time you access an element, you must first assign this to a variable in JavaScript</p>
+			<figure class='examples'>Example: Click Me (Interactivity with onclick)<img class='exImg' src='./images/examples/interactivityWithOnclick.png'></figure>
+		</section>
+		<br>
+
+		<section class='newTopic'>
+			<h3 class='lesson' id='2.4'>2.4 DOM Events with JavaScript</h3>
+			<p>Learn to create interactivty with DOM events using JavaScript</p>
+			<br>
+			<p><strong>What is an Event: </strong>Events on the web are user interactions and browser manipulations that you can program to trigger functionalty. Examples are a mouse click, webpage files loading or a user swiping right on an image. You can create iteractivty on a website by assigning a funciton to respond to a specific event firing.</p>
+			<p><strong>"Firing" Events: </strong>After a spefic event first/occurs in the DOM, an event handler function can be created to run as a respone</p>
+
+			<p><strong>Event Handler Registration: </strong>JavaScript interprets registered events as event objects with properties and methods. When you create an event handler function on a specific event, you create a property of the vent object. An event handler fuction is registered as a property attached to the DOM element being interacted with it. It is best practice to create named event handler functions, instaed of anonymous functions.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/eventHandlerRegistration.png'></figure>
+			<br>
+			<p><strong>Adding Event Handlers: </strong> The <span class='highlight'>.addEventListener()</span> is another common syntax for registering event handlers. The event listener waits for a specif event to occur and calls a named event handler function to respond to it. This method requres two arguments:</p>
+			<ol class='pushNum'>
+				<li>The event type as a string</li>
+				<li>The event handler funciton</li>
+			</ol> 
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/addEventListener.png'></figure>
+			<br>
+			<p><strong>Removing Event Handlers: </strong>The <span class='highlight'>.removeEventListener()</span> reverses the .addEventListener() method and stops the code from 'Listening for an event to fire when it no longer needs to. It passes two arguments:</p>
+			<ol class='pushNum'>
+				<li>The event type as a string</li>
+				<li>The event handler function</li>
+			</ol>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/removeEventListener.png'></figure>
+			<br>
+			<p><strong>Event Object Properties: </strong> JavaScript stores events as evnt objects with their related data and functionaltiy as properties and methods. There are some predetermined properties used to see infomrtion about the event. For example <span class='highlight'>.target, .type and .timestamp</span> properties.</p>
+			<p><strong>Mouse Events: </strong>When you click the mouse or move it around, mouse events fire. The <span class='highlight'>mousedown</span> event is fired when the user presses a mouse botton down. This is different from a click as the mouse buttone doesnt need to be released to fire. Here are a few examples:</p>
+			<ol class='pushNum'>
+				<li><span class='highlight'>mousedown</span></li>
+				<li><span class='highlight'>mouseup</span></li>
+				<li><span class='highlight'>mouseover</span></li>
+				<li><span class='highlight'>mouseout</span></li>
+			</ol>
+			<p><strong>Keyboard Events: </strong>Keyboard events are triggered by user interaction with keyboard keys in the browser. Keyboards events have unique properties assigned to their event objects like the <span class='highlight'>.key</span> Some examples are:</p>
+			<ol class='pushNum'>
+				<li><span class='highlight'>keydown</span></li>
+				<li><span class='highlight'>keyup</span></li>
+				<li><span class='highlight'>keypress</span></li>
+			</ol>
+		</section>
+		<br>
+
+		<section class='newTopic' id='2.5'>
+			<h3 class='lesson'>2.5 Templating with Handlebars</h3>
+			<p>Create dynamic webpages with an external library, Handlebars.js!</p>
+			<p>Handlebars provides atemplating engine which allows you to generate reusable HTML with JavaScript. You can think of this as a template.</p>
+			<br>
+			<p><strong>Implementing Handlebars:</strong></p>
+			<ol class='pushNum'>
+				<li>Add the Handlebars library to your project</li>
+				<li>Create a Handlebars script in your HTML file.</li>
+				<li>In your JavaScript file, grab the HTML stored in the Handlebars script</li>
+				<li>Use <span class='highlight'>Handlebars.compile()</span> to return a tempating funciton.</li>
+				<li>Pass in a <span class='highlight'>context</span> object to the templating fnuction to get a complied template.</li>
+				<li>Render the compiled template onto the web page</li>
+			</ol>
+			<p><strong>Handlebars expressions: </strong>Inside a script, Handlebar expressions are wrapped with double braces, <span class='highlight'>{{}}</span>. The content inside is the placeholder. The power of Handlebars lies in its reusability and extensibility.</p>
+			<p><strong>Handlebars 'If' block helper: </strong>If you want to check for a specific object property before your insert a value, you can use the <span class='highlight'>{{if}}</span>. This is similar to the if conditional in JavaScript.</p>
+			<p><strong>Handlebars "Else" section: </strong>If you use the if condition and the argument turns out to be falssy, then you will have a blank section in your HTML. Instead you can use the <span class='highlight'>{{else}}</span>.</p>
+			<p><strong>Handlebars "Each" and "This": </strong>Another helper that Handlebars offers is the <span class='highlight'>{{each}}</span> block which allows you to iterate through an array.<span class='highlight'>{{this}}</span>acts as a placeholder for the element in the iteration. Using <span class='highlight'>{{this}}</span> also gives you access to the properties of the element being iterated over.</p>
+			<p><strong>Combining "If" and "Each": </strong>Combing both blocks together in a single <span class='highlight'>&lt;script&gt;</span>.</p>
+		</section>
+		<br>
+	</section>
+	<br>
+	<!-- Intermediate JavaScript -->
+	<section class='module'>
+		<h2 id='3'>3. Intermediate JavaScript</h2>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.1'>3.1 Classes</h3>
+			<p><strong>Classes: </strong>Classes are a tool that developers use to quickly produce similar objects. To make a class, look at the following syntax:</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/class.png'></figure>
+			<br>
+			<p><strong>Constructor Method: </strong>JavaScript calls the <span class='highlight'>constructor()</span> method every time it creates a new instance of class.</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/constructor.png'></figure>
+			<br>
+			<p><strong>Instance: </strong>An instance is an object that contains the property names and method of a class. You need to save your instance to a variable. If you start a doggy daycare business, you would want to create a dog class so you can start creating dog instances. Here is what one looks like:</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/instances.png'></figure>
+			<br>
+			<p><strong>Methods: </strong>Add getters and a method to your class. It has the same syntax as objects but you can not include commas between methods.</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/methods.png'></figure>
+			<br>
+			<p><strong>Method Calls:  </strong>You can use the methods to access and manipulate data from the class instances. Calling getters and methods have the same syntax as objects - append the instance with a period, then the property or method name. Don't forget methods must include opening and closing parentheses.</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/methodCalls.png'></figure>
+			<br>
+			<p><strong>Inheritance: </strong>When multiple classes share properties or methods, they become candidats for inheritance - a tool developers use to decrease the amount of code they need to write. Wtih inheritance, you can create a parent class with proerties and methods that multiple child classes share. Then the child classes inherit the properties and methods from their parent class. <br>Once you create a parent class with the shared properties and methods, we can extend them to the subclasses. Some new key words:<br>
+			The <span class='highlight'>extends</span> keyword makes the methods of the parent class available inside the child class. Therefore, it creates a subclass.<br>
+			The <span class='highlight'>super</span> keyword calls the constructor of the parent class, and sends the child information to the parent constructor, which creates an instance for the child.<br>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/superExtend.png'></figure>
+			<br>
+			In a constructor, you must always call super in the first line of a constructor(), and then you can use the this keyword.<br>
+			</p>
+			<p><strong>Static Methods: </strong>Use the <span class='highlight'>static</span> keyword to create a static method. Statics methods can only be used when appending it to a class. You cannot access static methods from instances of the parent or child classes. Therefore, static methods are called on the class, but not on instances of the class.</p>
+		</section>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.2'>3.2 JavaScript Modules</h3>
+			<p>JavaScript modules are reusable pieces of code that can be exported from one program and imported for use in another program.<br>The can be used for:</p>
+			<ul class='dotPoints'>
+				<li>fix, fix and debug code</li>
+				<li>reuse and recycle logic in different parts of our application</li>
+				<li>prevent pollution of the global namepsace</li>
+			</ul>
+			<br>
+			<p><strong>module.exports: </strong>Define a module in one file and make the module available for use in another file with Node.js <span class='highlight'>module.exports</span> syntax. Every JavaScript file run in Node has a local <span class='highlight'>module</span> object with an <span class='highlight'>exports</span> property used to define what should be exported from the file. The pattern to export modules is:</p>
+			<ol>
+				<li>Create an object to represent the module</li>
+				<li>Add properties or methods to the module object</li>
+				<li>Export the module with <span class='highlight'>module.exports</span></li>
+			</ol>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/moduleExports.png'></figure>
+			<br> 	
+			<p><strong>require(): </strong>To make use of the exported module, we use the <span class='highlight'>require()</span> function to import modules. <span class='highlight'>require()</span> takes a file path argument pointing to the orginal module file. This is an outdated method. The pattern to import a module is:</p>
+				<ol>
+					<li>Import the module with <span class='highlight'>require()</span> and assign it to a local variable.</li>
+					<li> use the module and its proerties within a program.
+					</li>
+				</ol>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/require.png'>
+				</figure>
+			<br>
+			<p><strong>export default: </strong>Introduced in ES6, are two techniques used for exporitng modules, <em>default export</em> and <em>named exports</em>. Default exports are used to export JavaScript objects, functions, and primitive data types. The difference between the two is you can have mutiple named exports in one file whereas you can only have one default export in a file. The naming of import is completely independent in default export and we can use any name we like. Node.js doesnt support export default, so no module.exports is usually used for Node.js whereas ES6 syntax is used for front-end developement.</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/exportDefault.png'>
+				</figure>
+			<br>
+			<p><strong>import default: </strong>We can import an object like this:</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='images/examples/import.png'>
+				</figure>
+			<br>
+			<p><strong>Named Exports: </strong><em>named exports</em> allows us to export data in variables.</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/namedExports.png'>
+				</figure>
+			<br>
+			<p><strong>Named Imports: </strong>To import objects stored in a variable, we use the <span class='highlight'>import</span> keyword and include the variables in a set of <span class='highlight'>{}</span></p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/namedImports.png'>
+				</figure>
+			<br>
+			<p><strong>Export Named Exports: </strong>Named exports can be exported as soon as they are declared, by placing the keyword export in front of their variable declarations.</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/exportNamedExports.png'>
+				</figure>
+			<br>
+			<p><strong>Import Named Imports</strong>To import variables that are declared, simply use the original syntax that describes the variable name. Therefore, this does no effect how we import variables.</p>
+			<br>
+			<p><strong>Export as: </strong>Named exports also conveniently offer a way to change the name of variables whe we export or import them, using the <span class='highlight'>as</span> keyword.</p>
+				<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/exportAs.png'></figure>
+			<br>
+			<p><strong>Import as: </strong>To import named export aliases with the <span class='highlight'>as</span> keyword, we add the aliased variable in our import statement. You can additionaly import an enitre module as an alias.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/importAs.png'></figure>
+			<br>
+			<p><strong>Combining Export Statements: </strong>Using named and default exports together. It is best to avoid combining the two, but it can be useful.</p>
+			<br>
+			<p><strong>Combining Import Statemets: </strong>We can import a collection of objects and functions with the same data.</p>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.3'>3.3 Errors and Error Handling: Debugging JavaScript Code</h3>
+			<p><strong>Three questions to ask when debuggin an error</strong></p>
+			<ol class='pushNum'>
+				<li>In what line did the error occur?</li>
+				<li>What type of error was thrown?</li>
+				<li>What is the error message?</li>
+			</ol>
+			<br>
+			<p><strong>JavaScript Error Types: </strong></p>
+			<ul class='dotPoints'>
+				<li>SyntaxError: Typo creates invalid code</li>
+				<li>ReferenceError: You try to use a variable that does not exist</li>
+				<li>TypeError: Performing an opertation on a value of the wrong type</li>
+				<li>EvalError:</li>
+				<li>InternalErrpr:</li>
+				<li>RangeError:</li>
+				<li>URIError:</li>
+			</ul>
+			<p><strong>Debugging with console.log()</strong></p>
+			<p><strong>MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript</strong></p>
+			<p><strong>Stack Overflow: </strong>Question & Answer forum.</p>
+			<br>
+			<h3 class='lesson' id='3.4'>3.4 Errors and Error Handling: Error Handling</h3>
+			<p>In JavaScript, we handle errors using the keywords <span class='highlight'>try</span> and <span class='highlight'>catch</span>.</p>
+			<p><strong>Constructing an Error: </strong>We can use the <span class='highlight'>Error</span> function to make our own error object with a message that is unique to our progra. The function error takes an argument of a string, which becomes the vvalue of the error's message property. And you will need to console.log the function.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/constructingAnError.png'></figure>
+			<br>
+			<p><strong>The throw Keyword: </strong>Creating an error doesn't cause a program to stop, an error must be thrown for it to halt the program. Using this keyword will halt the program from running just like a built in JavaScript error.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/throwKeyword.png'></figure>
+			<br>
+			<p><strong>The try...catch Statement: </strong>we use <span class='highlight'>try...catch</span> statement to anticipate and handle errors. Inside the try block, code is evaluated and if an error is throw, the errpr us passed to the catch block and then the code insdie the catch block will execute.You can also use these statements ot handle built-in errors that are thrown by the JavaScrip engine that is reading and evaluating the code. This allows us to creat code that doesn;y break when an error is thrown.</p>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.5'>3.5 Promises</h3>
+			<p>An <em> asynchronous operation</em> is one that allows the computer to 'move on' to other tasks while waiting for the asynchronous operation to complete. JavaScript handles asynchronicity using the <span class='highlight'>Promise</span> object.</p>
+			<p><strong>What is a Promise?: </strong>Promises are objects that represent the eventual outcome of an asynchronous operation. A <span class='highlight'>Promise</span> object can be in one of three states:</p>
+				<ul class='dotPoints'>
+					<li>Pending: The inital state</li>
+					<li>Fulflled: The operation has complete successfully and the promise now has a resolved value.</li>
+					<li>Rejected: The operation has failed</li>
+				</ul>
+			<p>A promise is settled if it is no longer pending. All promises eventually settle.</p>
+
+			<p><strong>Constructing a Promise Object: </strong>To create a new <span class='highlight'>Promise</span> object, we use the <span class='highlight'>new</span> keyword and the <span class='highlight'>Promise</span> constructor method:</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/constructingAPromiseObject.png'></figure>
+			<br>
+			<p>The <span class='highlight'>Promise</span> construtor method takes a function parameter called the <em>executor function</em> which runs automatically when the constructor is called. The executor function generally starts an asynchronous operation and dictates how the promise should be settled. The executor function has two function parameters, <span class='highlight'>resolve()</span> and <span class='highlight'>reject()</span>.</p>
+			<p><strong>The Node setTimeout() Function: </strong><span class='highlight'>setTimeout()</span> is a Node API that uses callback functions to schedule tasks to be performed after a delay. setTimeout() hasa two parameters: a callback function and a dely in milliseconds. Using the setTimeout function, other lines of code will process whilst the setTimeout function will process in the a minimum time indicated by the second argument.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/setTimeoutFunction.png'></figure>
+			<br>
+			<p><strong>Consuming Promises: </strong>The <span class='highlight'>.then()</span> method allows us to have a promise, and when it settles, dictate what we want to happen. <span class='highlight'>.then()</span> is a higher order function, it takes two callback functions as arguments. The first handler is called <span class='highlight'>onFulfilled</span> and is the success handler. the second handler is called <span class='highlight'>onRejected</span>, and is a failure handler.</p>
+			<p><strong>The onFulfilled and onRejected Functions: </strong>With typical promise consumption, we won't know whether a promise will resolve or reject, so we'll need to provide the logic for either case. We can pass both an <span class='highlight'>onFulfilled</span> and <span class='highlight'>onRejected</span> callback to <span class='highlight'>.then()</span>.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/onFulfilledOnRejected.png'></figure>
+			<br>
+			<p><strong>Using catch() with Promises: </strong>The principal called <em>separation of concerns</em> will help write cleaner code by organizing code into distinct sections each handling a specific task. .catch() function takes only one argument <span class='highlight'>onRejected</span>. This does the same thing as .then() but with only one failure hanlder.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/catch.png'></figure>
+			<br>
+			<p><strong>Chaining Multiple Promises: </strong>The process of chaining promises together is called <em>composition</em></p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/chainingMultiplePromises.png'></figure>
+			<br>
+			<p><strong>Avoiding Common Mistakes: </strong>
+				<ul class='dotPoints'>
+					<li>Newsting promises instead of chaining them</li>
+					<li>Forgetting to return a promise</li>
+				</ul>
+			</p>
+			<p><strong>Using Promise.all(): </strong>Multiple asynchronous operations happening together. <span class='highlight'>Promise.all()</span> accepts an array of promises as its argument and returns a single promise. The settle can either settle with every promise in the argument resolves, or if any promises in the argument array is rejected.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/promiseAll.png'></figure>
+			<br>
+		</section>
+		<section class='newTopic'>
+		<h3 class='lesson' id='3.6'>3.6 Async Await</h3>
+		<p>Introduced in ES8, <span class='highlight'>asnyc...await</span> syntax allows us to write asynchronous code that reads similarly to traditional synchronous, imperative programs.</p>
+		<p><strong>The async Keyword: </strong>We can write both async function declarations and async function expressions. async functions always return a promise. It will return in one of three ways:</p>
+			<ul class='dotPoints'>
+				<li>If nothing is return from the function, it will return a promise with a resolved value of undefined.</li>
+				<li>If there's a non-promise value returned for the function, it will return a promise resolved to that value</li>
+				<li>If a promise is returned from the function, it will simply return that promise</li>
+			</ul>
+		<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/asyncKeyword.png'></figure>
+		<br>
+		<p><strong>The await Operator: </strong>
+			The <span class='highlight'>await</span> keyword is always inside <span class='highlight'>async</span> functions/ <span class='highlight'>await</span> returns the resolved value of a promise. <span class='highlight'>await</span> halts, or pauses, the execution of our <span class='highlight'>async</span> function until a given promise is resolved. Therefore, we <span class='highlight'>await</span> the resolution of the promise it returns inside an <span class='highlight'>async</span> function. In the example below, <span class='highlight'>await</span> halts the exectution until <span class='highlight'>myPromise()</span> is resolved.</p>
+				<figure class='examples'>Example: Click Me<img class='exImg'  src='./images/examples/awaitOperator.png'></figure>
+		<p><strong>Writing async Functions: </strong>It common to forget the await keyword. Excluding this in the code may result in an unwanted return value. Rememeber that the <span class='highlight'>await</span> operator returns the resolved value of a promise.</p>
+		<p><strong>Handling Dependent Promises: </strong>The true beauty of <span class='highlight'>async...await</span> is when we have a series of asynchronous actions which depend on one another.</p>
+		<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/handlingDependentPromises.png'></figure>
+		<br>
+		<p><strong>Handling Errors: </strong>With <span class='highlight'>async...await</span>, we can use <span class='highlight'>try...catch</span> statements for error handling.</p>
+		<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/handlingErrors.png'></figure>
+		<br>
+		<p><strong>Handling Independent Promises: </strong>Sometimes <span class='highlight'>async</span> functions contain multiple promises which are not dependent on the results of one another to exectue. In the example below, the <span class='highlight'>concurrent()</span> function, both promises' asynchronous operations can be run simultaneously. The promises are constrcuted without using <span class='highlight'>await</span>, and instead is used when prinitng to the console.</p>
+		<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/handlingIndependentPromises.png'></figure>
+		<br>
+		<p><strong>Await Promise.all(): </strong><span class='highlight'>Promise.all()</span> is a good choice if multiple asynchronous tasks are all required, but none must wait for any other before executing.</p>
+		<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/awaitPromiseAll.png'></figure>
+		<br>
+		</section>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.7'>3.7 Requests</h3>
+			<p><strong>HTTP Requests: </strong>How does your browser communicate with the internet?<br><br><strong>What is HTTP?</strong><br>HTTP stands for Hypertext Transfer Protocol and is used to structure requests and responses over the internet.HTTP requires data to be transferred from one point to another over the netwrok. The transfer of resourses happens using TCP. One advantage of JavaScript is that it is an asynchronous language. JavaScript uses an event loop to handle asynhronous function calls.</p>
+			<p><strong>XHR GET Reuests 1: </strong>AJAX = Asynchronous Javascript And XML. We use GET to retrieve data from a source. Asynchronous JavaScript and XML, enables requests to be made after the inital page load. Similarly, EXMlHttpRequests (XHR) API, named for XML, can be used to make many kinds of requests and supports other forms of data.</p>
+			<p><strong>How to create a XHR Get Request: </strong> The <span class='highlight'>XMLHttpRequest</span> object is used in JavaScript to create and send requests. JSON is JavaScript Object Notation, which is how the response is going to be formatted. When data is sent back, it will be in JSON format. The <span class='highlight'>.onreadystatechange</span> of <span class='highlight'>xhr</span> will contain an event listener which will execute when the <span class='highlight'>ready</span> property changes. The conditional statement inside of the code of block from above, will check to see if the request has finished. By returning the response, this will contain the data that we're getting back from the request. <span class='highlight'>.open()</span> creates a new request and the arguments passed in determine the type and URL of the request. The figure below is an example of a XHR GET request boilerplate code.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/XMLHttpRequestGet.png'></figure>
+			<br>
+			<p><strong>More XHR GET Requests: </strong>A query string contains additional information ot be sent with a request. A query string is separated from the URL using a <span class='highlight'>?</span> character. After <span class='highlight'>?</span>, you can then create a parameter which is a key value pair joined by a <span class='highlight'>=</span>. If you want to add an additional parameter, you will have to use the <span class='highlight'>&</span> character to separate your parameters.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/queryString.png'></figure>
+			<br>
+			<p><strong>XHR POST Requests: </strong>The difference between a GET request and POST request is that a POST request requires additional information to be sent though the request. This additional information is sent in the body of the post request. We can make a POST request using an API. Think of an API which goes back and forth between applications, databases and devices, to deliver data and create connectivity. In the figure below:</p>
+			<ul class='dotPoints'>
+				<li><span class='highlight'>JSON.stringify():</span> will onvert a alue to a JSON string. By converting the value to a string, we can then send the data to a server.</li>
+				<li><span class='highlight'>xhr.responseType:</span></li>
+				<li><span class='highlight'>xhr.onreadystatechange</span> This will contain the event handler that wil be called when <span class='highlight'>xhr</span>'s state changes.</li>
+				<li><span class='highlight'>xhr.readyState</span></li>
+				<li><span class='highlight'>xhr.response:</span> The response property wil contain the data that we're getting back from the POST request.</li>
+				<li><span class='highlight'>xhr.open('POST', url):</span> The open property creates a new request and the arguments passed in determine what type of request is being made and where it's being made to.</li>
+				<li><span class='highlight'>xhr.send(): </span>The send property will send the request to the server.</li>
+			</ul>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/XMLHttpRequestPOST.png'></figure>
+			<br>
+		</section>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3.8'>3.8 Requests with ES6</h3>
+			<p>We will see how <span class='highlight'>fetch()</span> uses promises to handle requests.</p>
+			<p><strong>fetch() GET: </strong>The <span class='highlight'>fetch()</span> function:</p>
+			<ul class='dotPoints'>
+				<li>Creates a request object that contains relevant information that an API needs.</li>
+				<li>Sends that request object to the API endpoint provided.</li>
+				<li>Returns a promise that ultimately resolves to a response object, which contains the status of the promise with information the API sent back.</li>
+			</ul>
+			<p>This is the boilerplate code necessary to create a GET request using the <span class='highlight'>fetch()</span> function.</p>
+			<ul class='dotPoints'>
+				<li>The first argument of fetch determines the endpoint of the request</li>
+				<li><span class='highlight'>.then()</span> will fire only after the promise status of <span class='highlight'>fetch()</span> has been resolved.</li>
+				<li>If there were no errors <span class='highlight'>response.ok</span> will be true.</li>
+				<li>The error code will be thrown when <span class='highlight'>response.ok</span> is falsy.</li>
+				<li>If we can not reach the endpoint, the second argument to <span class='highlight'>.then()</span> will console log the error message.</li>
+			</ul>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/fetchGET.png'></figure>
+			<br>
+			<p><strong>fetch() POST Request: </strong>What we doing here is:</p>
+			<ul class='dotPoints'>
+				<li>used <span class='highlight'>fetch()</span> to make GET and POST requests.</li>
+				<li>check the status of the responses coming back</li>
+				<li>catch errors that might possibly arise</li>
+				<li>taking successful responses and rendering it on the webpage</li>
+			</ul>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/fetchPOST.png'></figure>
+			<br>
+			<p><strong>async GET Request: </strong>The boilerplate code necessary to create a GET request using the <span class='highlight'>async</span> and <span class='highlight'>await</span>.</p>
+			<ul class='dotPoints'>
+				<li>Using an <span class='highlight'>async</span> function will return a promise</li>
+				<li><span class='highlight'>awawit</span> can only be used in an <span class='highlight'>async</span> function.<span class='highlight'>await</span> allowsa program to run while waiting for a promise to resolve.</li>
+				<li>in a <span class='highlight'>try...catch</span> statement, code in the <span class='highlight'>try</span> block will be run and in the event of an exception/error, the code in the <span class='highlight'>catch</span> statement will run.</li>
+			</ul>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/asyncAwaitGET.png'></figure>
+			<br>
+			<p><strong>async POST Request: </strong></p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/asyncAwaitPOST.png'></figure>
+			<br>
+			<p><strong>Here's a recap from above</strong></p>
+			<ul class='dotPoints'>
+				<li>GET and POST requests can be created a variety of ways.</li>
+				<li>Use AJAX to asynchronously request data from APIs.</li>
+				<li>Promises are a new type of JavaScript object that represent data that will eventually be returned from a request</li>
+				<li><span class='highlight'>fetch()</span> is a web API that can be used to create requests. <span class='highlight'>fetch()</span> will return promises</li>
+				<li>We can chain <span class='highlight'>.then()</span> methods to handle promises returned by <span class='highlight'>fetch()</span>.</li>
+				<li>The <span class='highlight'>.json()</span> method converts a returned promise to a JSON object</li>
+				<li><span class='highlight'>async</span> is a keyword that is used to create functions that will return promises.</li>
+				<li><span class='highlight'>await</span> is a keyword that is used to tell a promgram to continue moving through the message queue while a promise resolves.</li>
+				<li><span class='highlight'>await</span> can only be used within functions declared wtih <span class='highlight'>async</span>.</li>
+			</ul>
+			<p><strong>Main difference between GET and POST requests: GET requests only request data from other websites whereas POST submits data to other websites.</strong></p>
+		</section>
+	</section>
+	<br>
+</main>
+
+<!-- Some Note on JS -->
+<footer>
+	<section class='module'>
+	<section class='newTopic'>
+		<h2>Notes on JS</h2>
+			<ul>
+				<li>Data types: Primitive include number, string, boolean, null, undefined and symbol. Objects are complex.</li>
+				<li>. is a called the dot operator</li>
+				<li>Lodash library for more methods</li>
+				<li>Putting the last condition after the else statement</li>
+				<li>One of JavaScript's greatest assests is its non-blcking properties, or that it isan asynchronous language.</li>
+			</ul>
+	</section>
+	<br>
+	<section class='newTopic'>
+		<p>End of topic</p>
+	</section> 
+</section>
+<button onclick='topFunction()' id='myBtn' title='Go to top'>Back to Top</button>
+</footer>
+<script type='text/javaScript' src='./script2.js'></script>
 </body>
 </html>

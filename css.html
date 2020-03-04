@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS - Cheat Sheet</title>
+	<link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+<body>
+<header>
+	<nav class='header'>
+		<p><a href="index.html">Cheat Sheet</a></p>
+		<ul>
+			<li><a href="#">What do you want to know?</a>
+				<ul>
+					<li><a href="html.html">HTML</a></li>
+					<li><a href="css.html">CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="commandLine.html">Command Line</a></li>
+					<li><a href="git.html">Git</a></li>
+					<li><a href="react.html">React</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav> 	
+</header>
+<main>
+	<h1>CSS: Cheat Sheet</h1>
+	<nav class='jump'>
+		<ul>
+			<li>|| <a href='#1.1'>1.1 The Box Model</a> || <li>
+			<li><a href='#1.2'>1.2 Changing the Box Model</a> ||</li>
+			<li><a href='#2'>2. Display and Positioning</a> ||</li>
+			<li><a href='#3'>3. Colors</a> ||</li>
+			<li><a href='#4'>4. Typography</a> ||</li>
+			<li><a href='#5.1'>5.1 Responsive Design</a> ||</li>
+			<li><a href='#5.2'>5.2 Media Queries</a> ||</li>
+			<li><a href='#6'>6. Flexbox</a> ||</li>
+		</ul>
+	</nav>
+	<br>
+	<section class='module'>
+		<section class='newTopic'>
+			<h3 class='lesson' id='1.1'>1.1 The Box Model</h3>
+			<p><strong>The Box Model:</strong> Every element interpreted by the browser is inside a box. The box model has four properties, the content area's size (width and height) and the element's padding border, and margin.</p>
+			<figure class=examples>
+				<img class='exImg' src='./images/boxModel.jpg'>
+				<figcaption>Example of the box model</figcaption>
+			</figure>
+			<br>
+			<p><strong>Content Area:</strong> Properties <span class='highlight'>height & width</span></p>
+			<p><strong>Borders:</strong> Note, this is the property and the values are below</p>
+				<ul class='dotPoints'>
+					<li>style: none, dotted and solid. There are more to choose from</li>
+					<li>color: normal color format</li>
+				</ul>
+			<p><strong>Border Radius:</strong> You can modify the corners of an element's border box with the <span class='highlight'>border-radius</span> property. You can create a border that is a perfect circle by setting the value to 100%.</p>
+			<p><strong>Padding:</strong> This is the space between the contents of a box and the borders of a box. Imagine a mattboard in a picture frame, with the frame being the boarder. The <span class='highlight'>padding</span> property is often used to expand the background color and make content look less cramped. You can also do padding-top....</p>
+			<p><strong>Margins:</strong> This is the space directly outside of the box. This means other elements can't come within x amount of pixels of the elements border.</p>
+			<p><strong>Auto:</strong> The <span class='highlight'>margin</span> property also lets you center content. syntax is <span class='highlight'>margin: 0 auto;</span>. This will center the an object within its parent element.</p>
+			<p><strong>Margin Collapse:</strong> The larger of the two vertical margins sets the distance between adjacent elements. Horizontal items are unlike.</p>
+			<p><strong>Min and Max Height and Width:</strong> This is for different display sizes.</p>
+			<p><strong>Overflow:</strong> The <span class='highlight'>overflow</span> property controls what happens to content that spills, or overflows, outside its box. the overflow property is set on a parent element to instruct the child elements. It can be set to the following values:</p>
+				<ul class='dotPoints'>
+					<li><span class='highlight'>hidden</span>: Any content that overflows will be hidden.</li>
+					<li><span class='highlight'>scroll</span>: A scrollbar will be added to the element's box.</li>
+					<li><span class='highlight'>visible</span>The overflow content will be displayed outside of the containing element.</li>
+					</li>
+				</ul>
+			<p><strong>Resetting Defaults:</strong> All major web browsers have a default stylesheet they use in the absence of an external stylesheet. You can change this with the * selector and setting the margin and padding to 0.</p>
+			<p><strong>Visibility:</strong> Elements can be hidden with the <span class='highlight'>visibility</span> property. Values: hidden & visible.</p>
+			<br>
+			<h3 class='lesson' id='1.2'>1.2 Changing the Box Model</h3>
+			<p>Under the current box model, the border thickness and padding are added to the overall dimensions of the box. This can make it difficult to accurately size a box.</p>
+			<p><span class='highlight'>content-box</span>: The <span class='highlight'>box-sizing</span> property controls the type of box model the browser should use when interpreting a web page. The default value of this property is <span class='highlight'>content-box</span> (Affected by padding and border thickness).</p>
+			<p><span class='highlight'>border-box</span>: This box models setting avoids the dimensional issues that exist in the former box model you learned about. In this box model, the height and width of the box will remain fixed, with the border thickness and padding being included inside of the box, hence the overall dimesions of the box do not change. Therefore, a 200px width would be a 200px width with the contents of the width being auto adjusted, depending on the padding and broder dimensions. To implement it in the browser, use the universal selector (*).</p>
+			<br>
+		</section>
+		<section class='newTopic'>	
+			<h3 class='lesson' id='2'>2. Display and Positioning</h3>
+			<br>
+			<p>The default flow of the HTML documents is from left to right, top to bottom.</p>
+			<p><span class='highlight'>Position</span>: The position property can have the following values.
+				<ul class='dotPoints'>
+					<li><span class='highlight'>Relative:</span> This allows us to move the box in a relative position to the static. to move the box around, we need to use the top, bottom, left and right properties in conjuction with the posision property. With the directions, the box will remiain in the static position.</li>
+					<li><span class='highlight'>Absolute:</span> When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element.</li>
+					<li><span class='highlight'>Fixed:</span>A fixed element will scroll with the rest of the document and will always be in view. Good for navigation bars.</li>
+				</ul>
+			</p>
+			<p><span class='highlight'>z-index:</span> The z-index property controls how far 'back' or forward an element should appear. It accepts integer values.</p>
+			<p><span class='highlight'>display</span>: The display property dictates if an element can share the same horizontal space with other elements. The three values for the display property:
+				<ul class='dotPoints'>
+					<li><span class='highlight'>inline</span>: elements takes up as little space as possible, and they cannot have manually-adjsuted width or height.</li>
+					<li><span class='highlight'>block</span>: elements take up the width of their container and can have manually-adjusted heights.</li>
+					<li><span class='highlight'>inline-block</span>: elements can have set width and height, but they can also appear next to ech other and do not take up thier entire container width.</li>
+				</ul>
+			</p>
+			<p><span class='highlight'>Float</span>: If you're simply interested in moving an element as far left or as far right as possible, you can use the float property. The values are <span class='highlight'>left & right</span>.</p>
+			<p><span class='highlight'>clear</span>: property specifies how elements should behave when they bump into each other on the page. It can take on the following values:
+				<ul class='dotPoints'>
+					<li><span class='highlight'>left</span>: The left side of the element will not touch any other element within the same containing element.</li>
+					<li><span class='highlight'>right</span>: The right side of the element will not touch any other element within the same containing element.</li>
+					<li><span class='highlight'>both</span>: neither side of the element will touch any other element within the same containing element.</li>
+					<li><span class='highlight'>none</span>: the element can touch either side.</li>
+				</ul>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='3'>3. Colors</h3>
+			<p><strong>Foreground vs Background</strong>: Foreground color is the color that an element appears in, using the <span class='highlight'>color</span> property. Background colors use the <span class='highlight'>backgroud-color</span> property.</p>
+			<p><strong>Hexadecimal:</strong> Colors used to specify this system are called hex colors.</p>
+			<p><strong>RGB colors:</strong></p>
+			<p><strong>Hue, Saturation, and Lightness:</strong> The hsl value has a first input o 0-369, and the next two of 0-100%.</p>
+			<p><strong>Opacity and Alpha:</strong>To use opacity in the HSL color scheme, use the hsla syntax. The same applies for rgba.</p>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='4'>4. Typography</h3>
+			<p><span class='highlight'>font family</span>: When setting typefaces on a web page, the font specified in a stylesheet must be installed on a user's computer in order for that font to display when a user visit the web page. When the name of a typeface consists of more than one word, it must be enclosed in double quotes. It may be useful to add <strong>fallback fonts</strong> which come from a pre-installed family. Google fonts is a good directory which contain thousands of open-source fonts. Link the font inbetween the head tags using hte link tag, with attributes href, type and rel.
+				<ul class='dotPoints'>
+					<li>Serif: Extra detail</li>
+					<li>Sans Serif: no extra detail</li>
+				</ul>
+			</p>
+			<p><span class='highlight'>font weight</span>: Has the properties <span class='highlight'>bold</span> and <span class='highlight'>normal</span>. This property can also be assigned a value from 100 - 900 in multiples of 100, where 400 indicates default text, anything higher is bold, and anything lower is light.</p>
+			<p><span class='highlight'>font style</span>: This property has <span class='highlight'>italic</span> and <span class='highlight'>normal</span> values.</p>
+			<p><span class='highlight'>word-spacing</span>Increase the space between words in em units.</p>
+			<p><span class='highlight'>letter-spacing</span>This technique is called <em>tracking</em> and can be useful on uppercat text. Increase the space between words in em units.</p>
+			<p><span class='highlight'>text-transformation
+			</span>: Has values <span class='highlight'>uppercase</span> and <span class='highlight'>lowercase</span>.</p>
+			<p><span class='highlight'>text-align
+			</span>: Has values <span class='highlight'>left</span>,<span class='highlight'>center</span> and <span class='highlight'>right</span>.</p>
+			<p><span class='highlight'>line-height</span>: This property can set how the spacing between each line which can improve legibility. It can take values such as, a unitless number, which is a ration of the font size, and a number specified by a unit. Generally, the unitless ratio value is the preferred emthod since it is responsive.</p>
+			<p><span class='highlight'>@font-face
+			</span>: This is a way to import fonts directly into stylesheets with the <span class='highlight'>@font-face</span> property. To do this, load the font url onto the browser and you willl be redirected a the page of css files. You can also modify <span class='highlight'>@font-face</span> to use local font files. Here you will have url and format value.</p>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='5.1'>5.1 Responsive Design</h3>
+			<p><strong>Relative Measurements: </strong>Responsive design refers to the ability of a website to resize and reogainze its content based on the size of other content on the website and the size of the display. The unit px is a hard code whem units em and rem are relative measurements.</p>
+			<ul class='dotPoints'>
+				<li><span class='push'>em: This unit is based of the parent element font size being used.</span></li>
+				<li><span class='push'>rem: This unis is based of the root elements font size in the &lt;html&gt; tag. One advantage of using rems is that all elements are compared to the same font size value.</span></li>
+			</ul>
+			<p><strong>Percentages: Height & Width</strong>: To size non-text HTML elements relative ot their parent elements on the page you can us percentages. Percentages will size relative to the dimensions of the parent element (also known as the contianer).<br>Note: for the boxmodel  100% should only be used when content will not have padding, border or magin.</p>
+			<p><strong>Percentages: Padding & Margin</strong>: When setting these two by percentages, they are calculated based ony the width of the parent element.</p>
+			<p><strong>Width: Minimum & Maximum</strong>: This will limit how wide an element becomes. This can be usefull to prevent a text being too compressed or too spreadout. Use the units of pixels to ensure hard limits are being used on the dimensions.</p>
+			<p><strong>Height: Minimum & Maximum</strong>: Same application as above.</p>
+			<p><strong>Scaling Images and Videos</strong>:</p>
+			<figure class='examples'>
+				<figcaption>Example: Click Me</figcaption>
+				<img id='sizeDown' class='exImg' src='./images/examples/scalingImagesAndVideos.png'>
+			</figure>
+			<p><strong>Scaling Background Images</strong></p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/scalingBackgroundImages.png'></figure>
+			<br>
+
+			<h3 class='lesson' id='5.2'>5.2 Media Queries</h3>
+			<p>Here we will focus on how to deal with different screen sizes</p>
+			<p><strong>Media Queries</strong>: With media queiries, CSS can detect the size of the current screen and apply different CSS styles depending on the width of the screen. You will need to write the following syntax in your css file: @media only screen and (max-width: 480){"""}. This is just an exmaple.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/mediaQueries.png'></figure>
+			<p><strong>Range</strong>: You can specify a range by declaring a min-width/height and max-width/height.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/range.png'></figure>
+			<p><strong>Dots Per Inch (DPI)</strong>: Another feature we can set target to is screen resolution. dpi is a unit of measurement. If a resoultion is met, we can use CSS to display high resolution media.</p>
+			<p><strong>And Operator</strong>: This allows us to chain multiple media features of the sme type in one media query.</p>
+			<p><strong>Comma Sepearated List</strong>: If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list.</p>
+			<p><strong>Breakpoints</strong>: The points at which media queires are set are called <em>breakpoints</em>. Breakpoints are the screen sizes at which your web page does not appear properly. Rather than set breakpoints based on specific devices, the best practice is to resize your browser to view where the website naturally breaks based on its content.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/Breakpoints.png'></figure>
+			<br>
+		</section>
+		<br>
+		<section class='newTopic'>
+			<h3 class='lesson' id='6'>6. Flexbox</h3>
+			<p>Flexbox is not meant to lay out entire pages, but it is useful for positioning elements, whether in individually or in groups. There are two important components to a flexbox layout: flex containers and flex items. A container is an elemnt on a page that contains flex items.</p>
+			<p><span class='highlight'>display: flex</span>: For an element to become a flex continaer, its display property must be set to flex. Now the children of the flex container will become flex items. A div with declaration display: flex, will remain block level.</p>
+			<p><span class='highlight'>display: inline-flex</span>: This is if we want multiple flex containers to display inline with each other.</p>
+			<p><span class='highlight'>justify-content</span> (property, container): When we change the display to either flex or inline-flex, all of the flex items then move toward the upper left corner of the parent container (default behaviour). <span class='highlight'>justify-content</span> positions the items from left to right. There are five values for this property:</p>
+				<ul class='dotPoints'>
+					<li><span class='highlight'>flex-start</span></li>
+					<li><span class='highlight'>flex-end</span></li>
+					<li><span class='highlight'>center</span></li>
+					<li><span class='highlight'>space-around</span></li>
+					<li><span class='highlight'>space-between</span></li>
+				</ul>
+			<p><span class='highlight'>align-items</span>(container): This property flex's items vertically. There are five values for this property:</p>
+				<ul class='dotPoints'>
+					<li><span class='highlight'>flex-start</span></li>
+					<li><span class='highlight'>flex-end</span></li>
+					<li><span class='highlight'>center</span></li>
+					<li><span class='highlight'>baseline</span>The bottom of the content of all items will be aligned with each other.</li>
+					<li><span class='highlight'>stretch</span>: This will stretch the items from top to bottom of the container. Elements with specific heights and restriction will not stretch.</li>
+				</ul>
+			<p><span class='highlight'>flex-grow</span> (items): All flex items will shrink if the container is too small, however if the container is larger than necessary, the items will not stretch by default. The <span class='highlight'>flex-grow</span> property allows us to specify if items should grow to fill a container and also which items should grow proporitionally more or less than others.</p>
+			<p><span class='highlight'>flex-shrink</span> (items): Just like flex-grow, this property can be used to specify which elements will shrink and in what proportions. The value 0 will indicate nothing, whilst 1, 2 and 3 will shrink faster and smaller via order of magnitude.</p>
+			<p><span class='highlight'>flex-basis</span> (items): This property allows us to specify the width of an item before it stretches or shrinks. This values of the property is in units.</p>
+			<p><span class='highlight'>flex</span> (items): The flex property combines all of the three propertys above into one. The values will be written in the same manner, only separated by a space.</p>
+			<p><span class='highlight'>flex-wrap</span> (container): With this property, our flex items will move to the next line when necessary, instead of shrinking to fit in the container. This property can accept three values:</p>
+			<ul class='dotPoints'>
+				<li><span class='highlight'>wrap</span>: Child elements of a flex container that don't fit into a row will move down to the next line.</li>
+				<li><span class='highlight'>wrap-reverse</span>: The same but the order of rows are reverse.</li>
+				<li><span class='highlight'>nowrap</span>: This is the default value.</li>
+			</ul>
+			<p><span class='highlight'>align-content</span>(container): If a flex container has multiple rows of content, we can use this property to space the rows from top to bottom. This is different to <span class='highlight'>align-items</span>, where the later is used for single rows. This property has six values:</p>
+			<ul class='dotPoints'>
+				<li><span class='highlight'>flex-start</span></li>
+				<li><span class='highlight'>flex-end</span></li>
+				<li><span class='highlight'>center</span></li>
+				<li><span class='highlight'>space-between</span></li>
+				<li><span class='highlight'>space-around</span></li>
+				<li><span class='highlight'>stretch</span></li>
+			</ul>
+			<p><span class='highlight'>flex-direction</span> (container):This property allows us to swithc the major axis(horizontal) and cross axis(vertical). Major axis is used to position flex items with justify-content, flex-wrap, flex-grow and flex-shrink. The cross axis edits with algin-items and align-content. This property can accept four values:</p>
+			<ul class='dotPoints'>
+				<li><span class='highlight'>row</span></li>
+				<li><span class='highlight'>row-reverse</span></li>
+				<li><span class='highlight'>column</span></li>
+				<li><span class='highlight'>column-reverse</span></li>
+			</ul>
+			<p><span class='highlight'>flex-flow</span> (containers): This property is used to declare both <span class='highlight'>flex-wrap</span> and <span class='highlight'>flex-direction</span> properties in one line. The first value is for the flex flow and the second is for the flex directions property.</p>
+			<p><strong>Nested containers:</strong>Positioning flex containers inside of one another.</p>
+			<figure class='examples'>Example: Click Me<img class='exImg' src='./images/examples/nestedFlexboxes.png'></figure>
+		</section>
+		<br>
+	</section>
+
+		<!-- Somemore notes -->
+</main>
+
+<footer>
+	<section class='module'>
+		<section class='newTopic'>
+			<h2 class='lesson'>Some Random Notes</h2>
+			<ul>
+				<li>The changes we make in chrome dev tools are no permanent. This is because we are not changing the code that makes up the website but a representation of the code called the DOM. (DOM is the browsers interpretation of the source code)</li>
+				<li>If you want to highlight a few words in say a paragraph, use the &lt;span&gt; tag</li>
+				<li>px will result in the same size across all devices.</li>
+			</ul>
+		</section>
+	</section>
+	<button onclick='topFunction()' id='myBtn' title='Go to top'>Back to Top</button>
+</footer>
+
+	<script src='./script2.js' type='text/javaScript'></script>
+</body>
+</html>

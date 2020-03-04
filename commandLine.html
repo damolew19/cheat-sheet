@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Command Line - Cheat Sheet</title>
+	<link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+<body>
+<header>
+	<nav class='header'>
+	<p><a href="index.html">Cheat Sheet</a></p>
+	<ul>
+		<li><a href="#">What do you want to know?</a>
+			<ul>
+				<li><a href="html.html">HTML</a></li>
+				<li><a href="css.html">CSS</a></li>
+				<li><a href="javascript.html">JavaScript</a></li>
+				<li><a href="commandLine.html">Command Line</a></li>
+				<li><a href="git.html">Git</a></li>
+				<li><a href="react.html">React</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav> 	
+	<main>
+		<h1>JavaScript Cheat Sheet</h1>
+		<nav class='jump'>
+			<ul>
+				<li>||<a href='#1'>1. Navigation</a>||</li>
+				<li><a href='#2'>2. Viewing and Changing the File System</a>||</li>
+				<li><a href='#3'>3. Redirecting Input and Output</a>||</li>
+				<li><a href='#4'>4. Configuring the Environment</a>||</li>
+			</ul>
+		</nav>
+		<br>
+		<section class='module'>
+			<section class='newTopic'>
+				<h3 class='lesson' id='1'>1. Navigation</h3>
+				<p>Here is a list of <a href='https://www.codecademy.com/articles/command-line-commands'>command lines</a></p>
+				<p><strong>Command Line: </strong>The <strong>command line</strong> is a text interface which takes in commands, and passes it on to the computer's operating system to run. The advantage of using the command line is its power. You can run programs, write scripts to automate common tasks, and combine simple commands to handle difficult tasks.</p>
+				<ul class='dotPoints'>
+					<li><strong>$:</strong> shell prompt. This appears when the terminal is ready to accept a command.</li>
+					<li><strong>ls:</strong> the command line looks at the folder you are in and 'lists' the files and folders inside it.</li>
+					<li><strong>pwd:</strong> stands for 'print working directory'. It outputs the name of the directory you are currently in. This is like a file path.</li>
+					<li><strong>cd:</strong> stands for 'change directory'. This command witches you into the directory you specify, just as you would click on a folder. The directory will pass into the command is called the argument.</li>
+					<li><strong>cd .. :</strong> Will move up (back) one directory.</li>
+					<li><strong>mkdir:</strong> this command stands for 'make directory'. It takes in a directroy name as an argument, and then creates a new directory in the current working directory.</li>
+					<li><strong>touch:</strong> this command creates a new file inside the working directory. To make a file in another directory with using cd, just type touch and then the file path, sepearting with a /, and finishing with the file name argument.</li>
+				</ul>
+			</section>
+			<br>
+			<section class='newTopic'>
+				<h3 id='2' class='lesson'>2. Viewing and Changing the File System</h3>
+				<p>Using the command line to copy, move, and remove files and directories.</p>
+				<ul class='dotPoints'>
+					<li><strong>ls -a:</strong> the ls command lists all files an directories. the -a command (option) modifes the behaviour of the ls command to also list the files and directroies starting with a dot (.). File started with a dot are hidden, and do not appear with ls alone.</li>
+					<li><strong>ls -l:</strong> lists all content of a directory in long format. This appears as a table, rows and columns.</li>
+					<li><strong>ls -t:</strong> order files and directories by the time they were last modified.</li>
+					<li><strong>ls -alt:</strong> This is combining all of the above</li>
+					<li><strong>cp:</strong> this command copies files or directories. The first argument will be copied in to the second argument. Everything is separted by a space. You can copy multiple files and directories. The last argument will be the destination.</li>
+					<li><strong>cp * (destination):</strong> This special characters are called wildcards. This character selects all files in the working directory and copies it into the argument directory.</li>
+					<li><strong>cp m*.txt (destination):</strong> This command selects all files in the working directory starrting with 'm' and ending with '.txt' and copies to the destination</li>
+					<li><strong>mv:</strong> this command moves files. This has the same format as cp. The source file will be the first argument and the destination will be the last argument. This can be done with multiple items. To <strong>rename</strong> a file, use mv with the old file as the first argument and the new file as the second argument.</li>
+					<li><strong>rm:</strong> This command deletes files.</li>
+					<li><strong>rm -r:</strong> The -r stands for 'recursive', and it isused to delete a directory and all of its child directories.</li>
+					<li><strong>rm (directory)/*:</strong> Removes all files in a directory</li>
+				</ul>
+			</section>
+			<br>
+			<section class='newTopic'>
+				<h3 id='3' class='lesson'>3. Redirecting Input and Output</h3>
+				<p>Through <em>redirection</em> you can direct the input and output of a command to and from other files and programs.</p>
+				<ul class='dotPoints'>
+					<li><strong>stdin:</strong> <em>staddard input</em> is information inputted into the terminal through the keyboard or input device</li>
+					<li><strong>stdou:</strong> <em>standard output</em> is the information outputted after a process is run</li>
+					<li><strong>stderr:</strong> <em>stadard error</em> is an error message outputted by a failed process</li>
+					<li><strong>echo:</strong> this command accepts a string as <em>standard input</em> and echos the string back to the terminal as <em>standard output</em></li>
+					<li><strong>>:</strong> This command takes the standard output of the command on the left, and redirects it to the file on the right. Note, it will overwrite all original content.</li>
+					<li><strong>>>:</strong> This takes the standard output of the command on the left and appends it to the file on the right.</li>
+					<li><strong>cat:</strong> This command outputs contents of a file to the terminal.</li>
+					<li><strong><:</strong> This command takes the standard input from the file on the right and inputs it into the program on the left.</li>
+					<li><strong>|:</strong> is a 'pipe'. This command takes the standard output from the left, and <em>pipes</em> it as standard input to the command on the right. Hence, this redirects the standard output of a command to another command.</li>
+					<li><strong>wc:</strong> this command outputs the number of lines, words an characters in a file.</li>
+					<li><strong>sort:</strong> This comman takes the standard input and orders in alphabetically</li>
+					<li><strong>uniq:</strong> stats for'unique and filters out adjacent, duplicate lines in a file. A move effective way to call unique is to call sort first, then 'pipe' the standard output to uniq. By doing this,, then all duplicate lines will be filtered out.</li>
+					<li><strong>grep:</strong> stands for 'global regular expression print'. It seaches files for lines that match a pattern and returns the results. The first argument will be what to look for and the last argument will be where to look into.</li>
+					<li><strong>grep -i:</strong> enables the command to be case insensitive</li>
+					<li><strong>grep -R:</strong> searches all files in a directory and outputs filenames and lines containing matched results (this has a little more information compared to below).</li>
+					<li><strong>grep -Rl:</strong> searches all files in a directory and ouputs only filenames with matched results.</li>
+					<li><strong>sed:</strong> stands for "stream editor". It accepts standard input and modifies it based on an expression, before displaying it as output data. Imagine 'find and replace'.</li>
+					<li><strong>sed 's/snow/rain' (destination)</strong>:
+						<ul>
+							<li><strong>s:</strong> substitution</li>
+							<li><strong>snow:</strong> the search string</li>
+							<li><strong>rain:</strong> the replacement string</li>
+							<li>We search the destination file for the word 'snow' and replaces it with 'rain'</li>
+							<li>This command will only replate the <strong>first</strong> instance of 'snow' on a line.</li>
+							<li><strong>'s/snow/rain/g':</strong> the g expression here means 'global', and it will replcae all word's of snow with rain.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<br>
+			<section class='newTopic'>
+				<h3 id='4' class='lesson'>4. Configuring the Environment</h3>
+				<p><strong>Environment: </strong>Each time we lauch the terminal application, it creates a new session. This session immediately loads settings and preferences that make up the command line <em>environment</em>. Ths environment is customizable.</p>
+				<p><strong>nano: </strong> <em>nano</em> is a command line text editor and is only accessible from the command line. The command <span class='highlight'>nano hello.txt</span> opens a new text file named hello.txt in the nano editor.</p>
+				<p><strong>Bash Profile: </strong><span class='highlight'>nano ~/.bash_profile</span> here we created a file in nano call bash profile. <span class='highlight'>~/.bash_profile</span> is the name of file used to store environment settings. The ~ represents the user's home directory. The . indicates a hidden file.</p>
+				<p><strong>Aliases: </strong> The <span class='highlight'>alias</span> command allows you to create keyboad shortcuts, or aliases, for commonly used commands. Example, <span class='highlight'>alias pd='pwd'</span> creates the alias pd for the the pwd command and saves in to the bash profile.</p>
+				<p><strong>source: </strong><span class='highlight'>source</span> command is used to activate the changes to the bash profile for the current session. This makes the alias available in the current session.</p>
+				<p><strong>Environment Variables: </strong>Environment variables are variables that can be used across commands and programs and hold information about the environment. How to do this?</p>
+				<ul class='dotPoints'>
+					<li><span class='highlight'>USER="Jane Doe"</span> sets the environment variable USER to a name "Jane Doe". Usually the USER variable is set to the name of the computer's owner.</li>
+					<li><span class='highlight'>export</span> makes the variable to be avalable to all child sessions initiated from the session you are in.</li>
+					<li>At the command line, <span class='highlight'>echo $USER</span> returns the value of the variable. You need to include $.</li>
+				</ul>
+				<p><strong>PS1: </strong> PS1 is a variable that defines the makeup and style of the command prompt.</p>
+				<ul class='dotPoints'>
+					<li>export PS1=">>": sets the command prompt variable and expors the variable. Therefore we change $ to >>. This will only be applied after using the <span class='highlight'>source</span> command.</li>
+				</ul>
+				<p><strong>HOME: </strong>The <span class='highlight'>HOME</span> variable is an environment variable that displays the path of the home directory.</p>
+				<p><strong>PATH: </strong><span class='highlight'>PATH</span> is an environment variable that stores a lsit of directories separated by a colon. Each directroy contains scripts for the command line ot execute.</p>
+				<p><strong>env: </strong>The <span class='highlight'>env</span> command stands for environment, and returns a list of the environment variables for the current user.</p>
+				<p><strong>less: </strong>This command is similar to cat, but is better adapted to handling larger files. It displays files in the terminal one page at a time.</p>
+				</section>
+			<section class='newTopic'>
+				<h3 class='lesson'>Bash Scripting</h3>
+				<p><strong>Bash (or shell) scripting</strong> is a great way to automate repetive tasks and can save you a ton of time as a developer. Bash scripts execute within a Bash shell interpreter terminal. There are some conventions to follow to ensure that your computer is able to find and execute your Bash Scripts</p>
+				<ul class='dotPoints'>
+					<li>The beginning of your script file should start with <span class='highlight'>#!/bin/bash</span> on its own line. This will inform the computer the type of interpreter to use.</li>
+					<li>When saving the script file, it is good practice to place commonly used scripts in the <span class='highlight'>~/bin/</span> directory.</li>
+					<li>Script files also need to have the 'execute' permission to allow them to run. Add <span class='highlight'>script.sh</span> to a file name.</li>
+					<li>To ensure that scripts in <span class='highlight'>~/bin/</span> are available, you must add this directory to your <span class='highlight'>PATH</span> within your configuration file. Like so:<br> <span class='highlight'>PATH=~/bin:$PATH</span>
+					</li>
+				</ul>
+				<p><strong>Variables: </strong>Within bash scripts, variables are declared by settig the variable name equal to another value like so:<br>greeting='hello'<br> To acccess the value, prepend the variable with $.</p>
+				<p><strong>Conditionals: </strong>When bash scripting, you can use conditionals to control which set of commands within the script run. A complete syntax using conditionals in a bash script is:</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/bashConditionals.png'>
+				</figure>
+				<p>Bash scripts use a specific list of operators for comparison. Here is the list:</p>
+				<ul class='dotPoints'>
+					<li>Equal: <span class='highlight'>-eq</span></li>
+					<li>Not Equal: <span class='highlight'>-ne</span></li>
+					<li>Less than or equal: <span class='highlight'>-le</span></li>
+					<li>Less than: <span class='highlight'>-lt</span></li>
+					<li>Greater than or equal: <span class='highlight'>-ge</span></li>
+					<li>Greater than: <span class='highlight'>-gt</span></li>
+					<li>Is null: <span class='highlight'>-z</span></li>
+				</ul>
+				<p>When comparing strings, it is best practice to put the variable into quotes. The common operators for comparing strings are:</p>
+				<ul class='dotPoints'>
+					<li>Equal: <span class='highlight'>==</span></li>
+					<li>Not equal: <span class='highlight'>!=</span></li>
+				</ul>
+				<br>
+				<p><strong>Loops: </strong>Three different loops within a bash script: for, while and until. The syntax for each:</p>
+				<figure class='examples'>
+					<figcaption>Example: For Loop</figcaption>
+					<img class='exImg' src='./images/examples/bashForLoop.png'>
+				</figure>
+				<figure class='examples'>
+					<figcaption>Example: While Loop</figcaption>
+					<img class='exImg' src='./images/examples/bashWhileLoop.png'>
+				</figure>
+				<figure class='examples'>
+					<figcaption>Example: Until Loop</figcaption>
+					<img class='exImg' src='./images/examples/bashUntilLoop.png'>
+				</figure>
+				<br>
+				<p><strong>Inputs: </strong>How to access data external to the bash script. There are two ways to do this. The first is to prompt the user for input using the <span class='highlight'>read</span> sytnax. Another way to access external data is to have the user add input arguments when they run your script. These arguents are entered after the script name and are separated by spaces. Within the script, these are accessed using $1, $2 and so on. You can iterate over them using $@. Lastly, we can access external files to our script. You can assign a set of files to a variable name using standard bash pattern matching using regular expressions.</p>
+				<p><strong>Aliases: </strong>We can create aliases of our script name files using the following syntax:</p>
+				<figure class='examples'>
+					<figcaption>Example: Click Me</figcaption>
+					<img class='exImg' src='./images/examples/aliasesBashScript.png'>
+				</figure>
+			</section>
+		</section>
+	</main>
+</header>
+	<h2>Notes</h2>
+	<ul>
+		<li>To create a folder called "project" in the terminal, use command: mkdri project</li>
+	</ul>
+</body>
+</html>
